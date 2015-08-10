@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/AndroidDemo.iml" filepath="$PROJECT_DIR$/AndroidDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/gravityball/gravityball.iml" filepath="$PROJECT_DIR$/gravityball/gravityball.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iCampus-Android-Restructure/iCampus-Android-Restructure.iml" filepath="$PROJECT_DIR$/iCampus-Android-Restructure/iCampus-Android-Restructure.iml" />
     </modules>
   </component>
 </project>
