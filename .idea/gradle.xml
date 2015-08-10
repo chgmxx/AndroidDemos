@@ -11,6 +11,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/gravityball" />
+            <option value="$PROJECT_DIR$/handlerdemo" />
+            <option value="$PROJECT_DIR$/handlerprogressbardemo" />
             <option value="$PROJECT_DIR$/iCampus-Android-Restructure" />
           </set>
         </option>

@@ -1,1 +1,1 @@
-include ':app', ':gravityball', ':iCampus-Android-Restructure'
+include ':app', ':gravityball', ':iCampus-Android-Restructure', ':handlerdemo', ':handlerprogressbardemo'

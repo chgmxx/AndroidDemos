@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.iflab.icampus" >
-
-    <uses-permission android:name="android.permission.INTERNET" />
+    package="com.example.ahtcfg24.handlerprogressbardemo" >
 
     <application
         android:allowBackup="true"
@@ -17,16 +15,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".OAuthActivity" >
-        </activity>
-        <activity
-            android:name=".PersonalActivity"
-            android:label="@string/title_activity_personal" >
-        </activity>
-        <activity
-            android:name=".SplashActivity"
-            android:label="@string/title_activity_splash" >
         </activity>
     </application>
 
