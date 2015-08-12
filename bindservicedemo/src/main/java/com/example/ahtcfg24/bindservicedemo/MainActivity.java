@@ -16,6 +16,7 @@ public class MainActivity extends Activity
     public static final String TAG = "ServiceConnect";
     private Button button, button2, button3, button4;
     private ServiceConnection serviceConnection;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -43,14 +44,14 @@ public class MainActivity extends Activity
         @Override
         public void onClick(View v)
         {
-
+            intent = new Intent(MainActivity.this, MyService.class);
             switch (v.getId())
             {
                 case R.id.button:
-                    startService(new Intent(MainActivity.this, MyService.class));
+                    startService(intent);
                     break;
                 case R.id.button2:
-                    stopService(new Intent(MainActivity.this, MyService.class));
+                    stopService(intent);
                     break;
                 case R.id.button3:
                     serviceConnection = new ServiceConnection()
@@ -67,8 +68,8 @@ public class MainActivity extends Activity
                             Log.i(TAG, "--->onServiceDisconnected");
                         }
                     };
-                    bindService(new Intent(MainActivity.this, MyService.class), serviceConnection,
-                                Service.BIND_AUTO_CREATE);//第三个参数是指定Service创建类型，一般是BIND_AUTO_CREATE
+                    bindService(intent, serviceConnection, Service.BIND_AUTO_CREATE);
+                    //第三个参数是指定Service创建类型，一般是BIND_AUTO_CREATE
                     break;
                 case R.id.button4:
                     unbindService(serviceConnection);
