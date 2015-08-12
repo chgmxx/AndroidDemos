@@ -30,55 +30,52 @@ public class MainActivity extends Activity
         button4 = (Button) findViewById(R.id.button4);
 
 
-        button.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                startService(new Intent(MainActivity.this, MyService.class));
-            }
-        });
-        button2.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                stopService(new Intent(MainActivity.this, MyService.class));
-            }
-        });
-        button3.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                serviceConnection = new ServiceConnection()
-                {
-                    @Override
-                    public void onServiceConnected(ComponentName name, IBinder service)
-                    {
-                        Log.i(TAG, "--->onServiceConnected");
-                    }
+        button.setOnClickListener(new ButtonListener());
+        button2.setOnClickListener(new ButtonListener());
+        button3.setOnClickListener(new ButtonListener());
+        button4.setOnClickListener(new ButtonListener());
 
-                    @Override
-                    public void onServiceDisconnected(ComponentName name)
-                    {
-                        Log.i(TAG, "--->onServiceDisconnected");
-
-                    }
-                };
-
-                bindService(new Intent(MainActivity.this, MyService.class), serviceConnection, Service.BIND_AUTO_CREATE);//第三个参数是指定Service创建类型，一般是BIND_AUTO_CREATE
-            }
-        });
-        button4.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                unbindService(serviceConnection);
-            }
-        });
     }
 
 
+    private class ButtonListener implements View.OnClickListener
+    {
+        @Override
+        public void onClick(View v)
+        {
+
+            switch (v.getId())
+            {
+                case R.id.button:
+                    startService(new Intent(MainActivity.this, MyService.class));
+                    break;
+                case R.id.button2:
+                    stopService(new Intent(MainActivity.this, MyService.class));
+                    break;
+                case R.id.button3:
+                    serviceConnection = new ServiceConnection()
+                    {
+                        @Override
+                        public void onServiceConnected(ComponentName name, IBinder service)
+                        {
+                            Log.i(TAG, "--->onServiceConnected");
+                        }
+
+                        @Override
+                        public void onServiceDisconnected(ComponentName name)
+                        {
+                            Log.i(TAG, "--->onServiceDisconnected");
+                        }
+                    };
+                    bindService(new Intent(MainActivity.this, MyService.class), serviceConnection,
+                                Service.BIND_AUTO_CREATE);//第三个参数是指定Service创建类型，一般是BIND_AUTO_CREATE
+                    break;
+                case R.id.button4:
+                    unbindService(serviceConnection);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
 }
