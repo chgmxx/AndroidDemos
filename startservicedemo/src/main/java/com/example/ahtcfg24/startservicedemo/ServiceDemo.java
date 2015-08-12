@@ -13,7 +13,6 @@ public class ServiceDemo extends Service
     public void onCreate()
     {
         super.onCreate();
-
         Log.i(TAG, "--->onCreate");
     }
 
@@ -37,6 +36,7 @@ public class ServiceDemo extends Service
     @Override
     public IBinder onBind(Intent intent)
     {
+        //通过StartService启动无需重写该方法
         return null;
     }
 }
