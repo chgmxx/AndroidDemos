@@ -21,8 +21,6 @@ public class ServiceDemo extends Service
     {
         super.onDestroy();
         Log.i(TAG, "--->onDestroy");
-
-
     }
 
     @Override

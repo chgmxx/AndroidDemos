@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/handlerdemo/handlerdemo.iml" filepath="$PROJECT_DIR$/handlerdemo/handlerdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/handlerprogressbardemo/handlerprogressbardemo.iml" filepath="$PROJECT_DIR$/handlerprogressbardemo/handlerprogressbardemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/iCampus-Android-Restructure/iCampus-Android-Restructure.iml" filepath="$PROJECT_DIR$/iCampus-Android-Restructure/iCampus-Android-Restructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/serviceplayerdemo/serviceplayerdemo.iml" filepath="$PROJECT_DIR$/serviceplayerdemo/serviceplayerdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/startservicedemo/startservicedemo.iml" filepath="$PROJECT_DIR$/startservicedemo/startservicedemo.iml" />
     </modules>
   </component>
