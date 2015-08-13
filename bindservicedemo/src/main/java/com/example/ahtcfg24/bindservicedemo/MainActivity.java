@@ -38,6 +38,17 @@ public class MainActivity extends Activity
 
     }
 
+    /**
+     * 如果在service绑定的Activity被结束之后，service却没有解绑就会导致后台出现异常
+     * 或者在连接中断后去解绑也会出现异常
+     * 这样做可保障不出现上述异常
+     */
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        unbindService(serviceConnection);
+    }
 
     private class ButtonListener implements View.OnClickListener
     {

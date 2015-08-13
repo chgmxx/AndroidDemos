@@ -32,11 +32,18 @@ public class ServiceDemo extends Service
         Log.i(TAG, "--->onStart");
     }
 
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId)
+    {
+        Log.i(TAG, "--->onStartCommand");
+        return super.onStartCommand(intent, flags, startId);
+    }
+
     /*onBinder()是父类中的抽象方法，必须被复写*/
     @Override
     public IBinder onBind(Intent intent)
     {
-        //通过StartService启动无需重写该方法
+        //通过StartService启动无需返回任何东西
         return null;
     }
 }
