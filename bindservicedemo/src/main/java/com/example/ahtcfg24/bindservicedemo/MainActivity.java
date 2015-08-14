@@ -11,16 +11,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends Activity
-{
+public class MainActivity extends Activity {
     public static final String TAG = "ServiceConnect";
     private Button button, button2, button3, button4;
     private ServiceConnection serviceConnection;
     private Intent intent;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -44,20 +42,16 @@ public class MainActivity extends Activity
      * 这样做可保障不出现上述异常
      */
     @Override
-    protected void onDestroy()
-    {
+    protected void onDestroy() {
         super.onDestroy();
         unbindService(serviceConnection);
     }
 
-    private class ButtonListener implements View.OnClickListener
-    {
+    private class ButtonListener implements View.OnClickListener {
         @Override
-        public void onClick(View v)
-        {
+        public void onClick(View v) {
             intent = new Intent(MainActivity.this, MyService.class);
-            switch (v.getId())
-            {
+            switch (v.getId()) {
                 case R.id.button:
                     startService(intent);
                     break;
@@ -65,8 +59,7 @@ public class MainActivity extends Activity
                     stopService(intent);
                     break;
                 case R.id.button3:
-                    serviceConnection = new ServiceConnection()
-                    {
+                    serviceConnection = new ServiceConnection() {
                         /**
                          * 该方法只在onBind方法有不为空的返回值时才会被调用
                          *
@@ -81,8 +74,7 @@ public class MainActivity extends Activity
                         }
 
                         @Override
-                        public void onServiceDisconnected(ComponentName name)
-                        {
+                        public void onServiceDisconnected(ComponentName name) {
                             Log.i(TAG, "--->onServiceDisconnected");
                         }
                     };

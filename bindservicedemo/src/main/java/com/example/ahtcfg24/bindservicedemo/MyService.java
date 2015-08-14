@@ -16,13 +16,11 @@ public class MyService extends Service {
     @Override
     public IBinder onBind(Intent intent) {
         Log.i(TAG, "--->onBind");
-        return
-                new Binder() {
-                    public String toString() {
-                        return "这是个Binder对象";
+        return new Binder() {
+            public String toString() {
+                return "这是个Binder对象";
             }
-                }
-                ;
+        };
 
     }
 
