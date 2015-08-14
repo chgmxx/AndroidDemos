@@ -6,46 +6,41 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
-public class MyService extends Service
-{
+public class MyService extends Service {
     public static final String TAG = "MyService";
 
     /**
      * @param intent
-     * @return bind service时需要使得onBind方法返回一个IBinder类型的类，而Binder类恰好实现了IBinder接口
+     * @return bind service时需要使得onBind方法返回一个IBinder类型的类，否则不会调用onServiceConnected，而Binder类恰好实现了IBinder接口
      */
     @Override
-    public IBinder onBind(Intent intent)
-    {
+    public IBinder onBind(Intent intent) {
         Log.i(TAG, "--->onBind");
-        return new Binder()
-        {
-            public Service getService()
-            {
-                return MyService.this;
+        return
+                new Binder() {
+                    public String toString() {
+                        return "这是个Binder对象";
             }
-        };
+                }
+                ;
 
     }
 
     @Override
-    public void onCreate()
-    {
+    public void onCreate() {
         Log.i(TAG, "--->onCreate");
 
         super.onCreate();
     }
 
     @Override
-    public int onStartCommand(Intent intent, int flags, int startId)
-    {
+    public int onStartCommand(Intent intent, int flags, int startId) {
         Log.i(TAG, "--->onStartCommand");
         return super.onStartCommand(intent, flags, startId);
     }
 
     @Override
-    public void onDestroy()
-    {
+    public void onDestroy() {
         Log.i(TAG, "--->onDestroy");
 
         super.onDestroy();
@@ -53,15 +48,13 @@ public class MyService extends Service
     }
 
     @Override
-    public boolean onUnbind(Intent intent)
-    {
+    public boolean onUnbind(Intent intent) {
         Log.i(TAG, "--->onUnbind");
         return super.onUnbind(intent);
     }
 
     @Override
-    public void onStart(Intent intent, int startId)
-    {
+    public void onStart(Intent intent, int startId) {
         Log.i(TAG, "--->onStart");
         super.onStart(intent, startId);
     }

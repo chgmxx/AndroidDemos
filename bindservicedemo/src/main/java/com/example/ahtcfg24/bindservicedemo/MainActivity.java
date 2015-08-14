@@ -67,9 +67,16 @@ public class MainActivity extends Activity
                 case R.id.button3:
                     serviceConnection = new ServiceConnection()
                     {
+                        /**
+                         * 该方法只在onBind方法有不为空的返回值时才会被调用
+                         *
+                         * @param name    与当前组件（Activity）绑定的Service名称
+                         * @param service 从绑定的Service中的onBind方法中返回的IBender实例
+                         */
                         @Override
-                        public void onServiceConnected(ComponentName name, IBinder service)
-                        {
+                        public void onServiceConnected(ComponentName name, IBinder service) {
+                            System.out.println(name);
+                            System.out.println(service);
                             Log.i(TAG, "--->onServiceConnected");
                         }
 
