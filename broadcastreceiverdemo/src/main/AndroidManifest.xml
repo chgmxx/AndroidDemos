@@ -19,10 +19,9 @@
         </activity>
 
         <receiver
-            android:name=".MyReceiver"
-            >
+            android:name=".MyReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.AIRPLANE_MODE"/>
+                <action android:name="android.intent.action.My_Broadcast"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </receiver>
