@@ -1,1 +1,1 @@
-include ':app', ':gravityball', ':iCampus-Android-Restructure', ':handlerdemo', ':handlerprogressbardemo', ':activitydemo', ':startservicedemo', ':bindservicedemo', ':serviceplayerdemo', ':broadcastreceiverdemo'
+include ':app', ':gravityball', ':iCampus-Android-Restructure', ':handlerdemo', ':handlerprogressbardemo', ':activitydemo', ':startservicedemo', ':bindservicedemo', ':serviceplayerdemo', ':broadcastreceiverdemo', ':broadcastreceiverdemo2'
