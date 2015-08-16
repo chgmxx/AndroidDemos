@@ -13,8 +13,7 @@ import android.widget.Button;
 
 import static android.view.View.OnClickListener;
 
-public class MainActivity extends Activity
-{
+public class MainActivity extends Activity {
     public static final String TAG = "Connected";
     private Button button, button2;
     private Intent intent;
@@ -22,8 +21,7 @@ public class MainActivity extends Activity
     private ServiceConnection connection;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -34,32 +32,26 @@ public class MainActivity extends Activity
         button2.setOnClickListener(new ButtonListener());
 
         intent = new Intent(MainActivity.this, MyService.class);
-        connection = new ServiceConnection()
-        {
+        connection = new ServiceConnection() {
             @Override
-            public void onServiceConnected(ComponentName name, IBinder service)
-            {
+            public void onServiceConnected(ComponentName name, IBinder service) {
                 Log.i(TAG, "--->音乐服务已连接");
                 myService = (MyService.MyBinder) service;
                 myService.playMedia();//播放
             }
 
             @Override
-            public void onServiceDisconnected(ComponentName name)
-            {
+            public void onServiceDisconnected(ComponentName name) {
                 Log.i(TAG, "--->音乐服务已崩溃");
             }
         };
     }
 
 
-    private class ButtonListener implements OnClickListener
-    {
+    private class ButtonListener implements OnClickListener {
         @Override
-        public void onClick(View v)
-        {
-            switch (v.getId())
-            {
+        public void onClick(View v) {
+            switch (v.getId()) {
                 case R.id.button:
                     bindService(intent, connection, Service.BIND_AUTO_CREATE);
                     break;

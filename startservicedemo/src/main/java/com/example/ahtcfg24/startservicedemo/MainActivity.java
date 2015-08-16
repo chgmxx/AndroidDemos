@@ -10,14 +10,12 @@ import android.widget.Button;
 /**
  * 启动Service
  */
-public class MainActivity extends Activity
-{
+public class MainActivity extends Activity {
     private Button button;
     private Button button2;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -29,14 +27,11 @@ public class MainActivity extends Activity
     }
 
 
-    private class ButtonListener implements OnClickListener
-    {
+    private class ButtonListener implements OnClickListener {
         @Override
-        public void onClick(View v)
-        {
+        public void onClick(View v) {
             Intent intent = new Intent(MainActivity.this, ServiceDemo.class);
-            switch (v.getId())
-            {
+            switch (v.getId()) {
                 case R.id.button:
                     startService(intent);//启动Service
                     break;
