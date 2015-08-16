@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+    private MyReceiver receiver;
+    private IntentFilter intentFilter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +20,18 @@ public class MainActivity extends AppCompatActivity {
      * 在代码中动态注册receiver
      */
     public void registerMyReceiver() {
-        MyReceiver receiver = new MyReceiver();
-        IntentFilter intentFilter = new IntentFilter();
+        receiver = new MyReceiver();
+        intentFilter = new IntentFilter();
         intentFilter.addAction("android.intent.action.AIRPLANE_MODE");
         registerReceiver(receiver, intentFilter);
     }
 
-
+    /**
+     * 当退出程序时如果没有注销Receiver，就会出现异常，因此在onDestroy中进行注销操作
+     */
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(receiver);
+    }
 }
