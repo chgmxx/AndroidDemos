@@ -18,8 +18,7 @@
             </intent-filter>
         </activity>
 
-        <receiver
-            android:name=".MyReceiver">
+        <receiver android:name=".MyReceiver">
         </receiver>
     </application>
 
