@@ -14,7 +14,8 @@ public class MyReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        Toast.makeText(context, "收到", Toast.LENGTH_SHORT).show();
-        Log.i("静态广播", "--->收到消息");
+        String msg = intent.getStringExtra("广播");
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+        Log.i("静态广播", "--->" + msg);
     }
 }

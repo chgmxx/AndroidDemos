@@ -10,5 +10,6 @@ public class MyReceiver2 extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.i("2", "--->Received");
+        abortBroadcast();//终止广播的发送
     }
 }

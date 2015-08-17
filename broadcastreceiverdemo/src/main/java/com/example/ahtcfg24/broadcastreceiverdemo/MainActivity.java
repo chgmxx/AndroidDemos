@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
 
     public void send() {
         Intent intent = new Intent("android.intent.action.My_Broadcast");
-        intent.putExtra("广播", "发出一条广播");
+        intent.putExtra("广播", "这是自定义发出的一条广播");
         sendBroadcast(intent);
     }
 
