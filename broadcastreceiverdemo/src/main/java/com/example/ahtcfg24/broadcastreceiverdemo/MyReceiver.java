@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 /**
  * 由于清单文件中的Receiver注册的广播地址是android.intent.action.AIRPLANE_MODE，
+ *
  * 因此当手机被调成飞行模式，或者从飞行模式恢复正常模式时，都会执行onReceive方法
  */
 public class MyReceiver extends BroadcastReceiver {
