@@ -25,21 +25,21 @@
         <receiver
             android:name=".MyReceiver">
             <intent-filter android:priority="500">
-                <action android:name="MyOrderBroadcast"/>
+                <action android:name="android.intent.action.MyOrderBroadcast"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </receiver>
         <receiver
             android:name=".MyReceiver2">
             <intent-filter android:priority="200">
-                <action android:name="MyOrderBroadcast"/>
+                <action android:name="android.intent.action.MyOrderBroadcast"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </receiver>
         <receiver
             android:name=".MyReceiver3">
             <intent-filter android:priority="-200">
-                <action android:name="MyOrderBroadcast"/>
+                <action android:name="android.intent.action.MyOrderBroadcast"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </receiver>

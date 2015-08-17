@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
     }
 
     private void send() {
-        intent = new Intent("MyOrderBroadcast");//设定广播地址
+        intent = new Intent("android.intent.action.MyOrderBroadcast");//设定广播地址
         intent.putExtra("广播", "这是自定义发出的一条广播");
         sendOrderedBroadcast(intent, "android.permission.RECEIVE_MYBROADCAST");//接收者需要声明权限
     }
