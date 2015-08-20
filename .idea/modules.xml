@@ -4,16 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidDemo.iml" filepath="$PROJECT_DIR$/AndroidDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/activitydemo/activitydemo.iml" filepath="$PROJECT_DIR$/activitydemo/activitydemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/bindservicedemo/bindservicedemo.iml" filepath="$PROJECT_DIR$/bindservicedemo/bindservicedemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/broadcastreceiverdemo/broadcastreceiverdemo.iml" filepath="$PROJECT_DIR$/broadcastreceiverdemo/broadcastreceiverdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/broadcastreceiverdemo2/broadcastreceiverdemo2.iml" filepath="$PROJECT_DIR$/broadcastreceiverdemo2/broadcastreceiverdemo2.iml" />
       <module fileurl="file://$PROJECT_DIR$/broadcastreceiverdemo3/broadcastreceiverdemo3.iml" filepath="$PROJECT_DIR$/broadcastreceiverdemo3/broadcastreceiverdemo3.iml" />
       <module fileurl="file://$PROJECT_DIR$/broadcastreceiverdemo4/broadcastreceiverdemo4.iml" filepath="$PROJECT_DIR$/broadcastreceiverdemo4/broadcastreceiverdemo4.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gravityball/gravityball.iml" filepath="$PROJECT_DIR$/gravityball/gravityball.iml" />
-      <module fileurl="file://$PROJECT_DIR$/handlerdemo/handlerdemo.iml" filepath="$PROJECT_DIR$/handlerdemo/handlerdemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/handlerprogressbardemo/handlerprogressbardemo.iml" filepath="$PROJECT_DIR$/handlerprogressbardemo/handlerprogressbardemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/iCampus-Android-Restructure/iCampus-Android-Restructure.iml" filepath="$PROJECT_DIR$/iCampus-Android-Restructure/iCampus-Android-Restructure.iml" />
       <module fileurl="file://$PROJECT_DIR$/serviceplayerdemo/serviceplayerdemo.iml" filepath="$PROJECT_DIR$/serviceplayerdemo/serviceplayerdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/startservicedemo/startservicedemo.iml" filepath="$PROJECT_DIR$/startservicedemo/startservicedemo.iml" />
     </modules>
