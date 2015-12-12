@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
+    private MyAsyncTask myAsyncTask;
     private TextView textView;
     private ProgressBar progressBar;
     private Button startButton, finishButton;
@@ -19,30 +20,31 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initView();
+        init();
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new MyAsyncTask().execute(characters);//点击按钮后执行异步任务
+                myAsyncTask.execute(characters);//点击按钮后执行异步任务
             }
         });
 
         finishButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new MyAsyncTask().cancel(true);//点击按钮后打断正在进行的异步任务
+                myAsyncTask.cancel(true);//点击按钮后打断正在进行的异步任务
             }
         });
     }
 
     /**
-     * 初始化控件
+     * 初始化
      */
-    private void initView() {
+    private void init() {
         textView = (TextView) findViewById(R.id.progress_text);
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);
         startButton = (Button) findViewById(R.id.start_button);
         finishButton = (Button) findViewById(R.id.finish_button);
+        myAsyncTask=new MyAsyncTask();
     }
 
     /**
@@ -97,7 +99,7 @@ public class MainActivity extends Activity {
         }
 
         /**
-         * 当publishProgress方法被执行后立即在UI线程中执行该方法
+         * 当publishProgress方法被执行后立即在主线程中执行该方法
          *
          * @param values publishProgress方法传进来的参数，一般为进度信息
          */
@@ -110,9 +112,10 @@ public class MainActivity extends Activity {
         }
 
         /**
-         * 如果执行了cancel()方法，那么在执行完doInBackground后就会在主线程中执行该方法
+         * 如果执行了cancel()方法，那么在执行完doInBackground后就会在主线程中执行该方法，
+         * 而不会去执行onPostExecute
          *
-         * @param result 从doInBackground中返回的result,可能为空
+         * @param result 从doInBackground中返回的result
          */
         @Override
         protected void onCancelled(String result) {
