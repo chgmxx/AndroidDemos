@@ -1,1 +1,1 @@
-include ':activitydemo', ':bindservicedemo', ':broadcastreceiverdemo', ':broadcastreceiverdemo2', ':broadcastreceiverdemo3', ':broadcastreceiverdemo4', ':serviceplayerdemo', ':startservicedemo', ':listviewdemo', ':asynctaskdemo'
+include ':videoplayer'
