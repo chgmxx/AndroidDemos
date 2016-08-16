@@ -1,1 +1,1 @@
-include ':videoplayer'
+include ':videoplayer',':vrlib'

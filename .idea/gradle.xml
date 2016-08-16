@@ -10,12 +10,14 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/videoplayer" />
+            <option value="$PROJECT_DIR$/vrlib" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/videoplayer" />
+            <option value="$PROJECT_DIR$/vrlib" />
           </set>
         </option>
       </GradleProjectSettings>
