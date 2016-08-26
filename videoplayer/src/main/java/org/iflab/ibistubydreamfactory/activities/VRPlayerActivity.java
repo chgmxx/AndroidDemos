@@ -12,11 +12,11 @@ import android.view.WindowManager;
 
 import com.asha.vrlib.MDVRLibrary;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import org.iflab.ibistubydreamfactory.R;
 import org.iflab.ibistubydreamfactory.utils.SpinnerBuildUtil;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * VR播放器抽象类
@@ -47,7 +47,6 @@ public abstract class VRPlayerActivity extends Activity {
         sProjectionMode.put(MDVRLibrary.PROJECTION_MODE_PLANE_FIT, "平面适应");
         sProjectionMode.put(MDVRLibrary.PROJECTION_MODE_PLANE_CROP, "平面拉伸");
         sProjectionMode.put(MDVRLibrary.PROJECTION_MODE_PLANE_FULL, "平面填充");
-        sProjectionMode.put(MDVRLibrary.PROJECTION_MODE_MULTI_FISHEYE, "多鱼眼");
 
         sAntiDistortion.put(1, "显示边框");
         sAntiDistortion.put(0, "隐藏边框");
